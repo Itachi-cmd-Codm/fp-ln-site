@@ -1,0 +1,3032 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="apple-mobile-web-app-capable"
+        content="yes"
+    >
+
+    <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="black-translucent"
+    >
+
+    <title>Our Story ❤️</title>
+
+
+    <style>
+
+        /* =====================================================
+           RESET
+        ===================================================== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif;
+
+            color: #fff;
+
+            background:
+                #09060d;
+
+            overflow-x: hidden;
+
+            -webkit-text-size-adjust: 100%;
+        }
+
+
+        button,
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+
+        button {
+            font-family: inherit;
+        }
+
+
+        /* =====================================================
+           VARIABLES
+        ===================================================== */
+
+        :root {
+
+            --pink: #ff6f9f;
+            --light-pink: #ffb4ca;
+            --deep-pink: #d94c7d;
+
+            --purple: #9c6cff;
+
+            --cream: #fff7f3;
+
+            --dark: #09060d;
+
+            --dark-purple: #170e20;
+
+            --muted: #c8b8ca;
+
+            --card:
+                rgba(255,255,255,0.065);
+
+            --border:
+                rgba(255,255,255,0.12);
+        }
+
+
+        /* =====================================================
+           BACKGROUND
+        ===================================================== */
+
+        body::before {
+
+            content: "";
+
+            position: fixed;
+
+            width: 500px;
+            height: 500px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,89,145,0.08);
+
+            filter: blur(100px);
+
+            top: -250px;
+            left: -150px;
+
+            pointer-events: none;
+
+            z-index: -2;
+        }
+
+
+        body::after {
+
+            content: "";
+
+            position: fixed;
+
+            width: 450px;
+            height: 450px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(140,80,255,0.08);
+
+            filter: blur(110px);
+
+            right: -200px;
+            bottom: -150px;
+
+            pointer-events: none;
+
+            z-index: -2;
+        }
+
+
+        /* =====================================================
+           FLOATING HEARTS
+        ===================================================== */
+
+        .floating-heart {
+
+            position: fixed;
+
+            bottom: -30px;
+
+            font-size: 18px;
+
+            opacity: 0;
+
+            pointer-events: none;
+
+            z-index: 2;
+
+            animation:
+                floatHeart linear forwards;
+        }
+
+
+        @keyframes floatHeart {
+
+            0% {
+
+                transform:
+                    translateY(0)
+                    translateX(0)
+                    rotate(0deg);
+
+                opacity: 0;
+            }
+
+            10% {
+                opacity: .55;
+            }
+
+            80% {
+                opacity: .25;
+            }
+
+            100% {
+
+                transform:
+                    translateY(-110vh)
+                    translateX(var(--drift))
+                    rotate(25deg);
+
+                opacity: 0;
+            }
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            padding:
+                70px
+                22px;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .hero-content {
+
+            max-width: 800px;
+
+            animation:
+                heroAppear 1.4s ease;
+        }
+
+
+        @keyframes heroAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(35px);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+        }
+
+
+        .hero-small {
+
+            font-size: 14px;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            color:
+                var(--light-pink);
+
+            margin-bottom: 25px;
+        }
+
+
+        .hero-heart {
+
+            font-size: 65px;
+
+            margin-bottom: 20px;
+
+            animation:
+                heartbeat 2s infinite;
+        }
+
+
+        @keyframes heartbeat {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+
+        .hero h1 {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(
+                    50px,
+                    12vw,
+                    100px
+                );
+
+            font-weight: 400;
+
+            line-height: .95;
+
+            margin-bottom: 25px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffffff,
+                    #ffb6cf,
+                    #ff6f9f
+                );
+
+            -webkit-background-clip: text;
+
+            background-clip: text;
+
+            -webkit-text-fill-color:
+                transparent;
+        }
+
+
+        .hero-name {
+
+            font-size:
+                clamp(
+                    22px,
+                    5vw,
+                    34px
+                );
+
+            color:
+                #ffffff;
+
+            margin-bottom: 25px;
+        }
+
+
+        .hero-description {
+
+            max-width: 580px;
+
+            margin: 0 auto;
+
+            color:
+                var(--muted);
+
+            font-size: 17px;
+
+            line-height: 1.8;
+        }
+
+
+        .scroll-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 8px;
+
+            margin-top: 45px;
+
+            padding:
+                14px
+                24px;
+
+            border:
+                1px solid
+                rgba(255,255,255,.15);
+
+            border-radius: 999px;
+
+            color: white;
+
+            background:
+                rgba(255,255,255,.05);
+
+            text-decoration: none;
+
+            transition:
+                .25s ease;
+        }
+
+
+        .scroll-button:hover {
+
+            background:
+                rgba(255,255,255,.1);
+
+            transform:
+                translateY(-3px);
+        }
+
+
+        /* =====================================================
+           GENERAL SECTIONS
+        ===================================================== */
+
+        section {
+
+            width: 100%;
+
+            max-width: 1100px;
+
+            margin:
+                0 auto;
+
+            padding:
+                100px
+                22px;
+        }
+
+
+        .section-label {
+
+            color:
+                var(--pink);
+
+            font-size: 12px;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 12px;
+        }
+
+
+        .section-title {
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(
+                    36px,
+                    7vw,
+                    58px
+                );
+
+            font-weight: 400;
+
+            line-height: 1.1;
+
+            margin-bottom: 20px;
+        }
+
+
+        .section-description {
+
+            max-width: 650px;
+
+            color:
+                var(--muted);
+
+            font-size: 16px;
+
+            line-height: 1.8;
+
+            margin-bottom: 50px;
+        }
+
+
+        /* =====================================================
+           THE DAY WE MET
+        ===================================================== */
+
+        .met-section {
+
+            text-align: center;
+        }
+
+
+        .met-card {
+
+            max-width: 800px;
+
+            margin: 0 auto;
+
+            padding:
+                55px
+                30px;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 30px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,.075),
+                    rgba(255,255,255,.025)
+                );
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .met-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 220px;
+            height: 220px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,100,150,.1);
+
+            filter: blur(70px);
+
+            top: -100px;
+            right: -80px;
+        }
+
+
+        .date {
+
+            color:
+                var(--light-pink);
+
+            font-size: 15px;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .met-card h3 {
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-size:
+                clamp(
+                    28px,
+                    6vw,
+                    45px
+                );
+
+            font-weight: 400;
+
+            margin-bottom: 25px;
+        }
+
+
+        .met-card p {
+
+            max-width: 650px;
+
+            margin: 0 auto;
+
+            color:
+                var(--muted);
+
+            font-size: 17px;
+
+            line-height: 1.9;
+        }
+
+
+        .met-heart {
+
+            font-size: 45px;
+
+            margin-top: 30px;
+        }
+
+
+        /* =====================================================
+           TIMELINE
+        ===================================================== */
+
+        .timeline {
+
+            position: relative;
+
+            max-width: 900px;
+
+            margin: 0 auto;
+        }
+
+
+        .timeline::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            bottom: 0;
+
+            left: 50%;
+
+            width: 1px;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    transparent,
+                    rgba(255,111,159,.55),
+                    transparent
+                );
+
+            transform:
+                translateX(-50%);
+        }
+
+
+        .timeline-item {
+
+            width: 50%;
+
+            padding:
+                20px
+                40px;
+
+            position: relative;
+
+            margin-bottom: 45px;
+        }
+
+
+        .timeline-item:nth-child(odd) {
+
+            left: 0;
+
+            text-align: right;
+        }
+
+
+        .timeline-item:nth-child(even) {
+
+            left: 50%;
+
+            text-align: left;
+        }
+
+
+        .timeline-dot {
+
+            position: absolute;
+
+            width: 14px;
+            height: 14px;
+
+            border-radius: 50%;
+
+            background:
+                var(--pink);
+
+            top: 30px;
+
+            box-shadow:
+                0 0 0 6px
+                rgba(255,111,159,.1),
+                0 0 25px
+                rgba(255,111,159,.45);
+        }
+
+
+        .timeline-item:nth-child(odd)
+        .timeline-dot {
+
+            right: -7px;
+        }
+
+
+        .timeline-item:nth-child(even)
+        .timeline-dot {
+
+            left: -7px;
+        }
+
+
+        .timeline-card {
+
+            padding:
+                25px;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 22px;
+
+            background:
+                var(--card);
+
+            transition:
+                .3s ease;
+        }
+
+
+        .timeline-card:hover {
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                rgba(255,111,159,.35);
+        }
+
+
+        .timeline-date {
+
+            color:
+                var(--pink);
+
+            font-size: 12px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 10px;
+        }
+
+
+        .timeline-card h3 {
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-size: 25px;
+
+            font-weight: 400;
+
+            margin-bottom: 10px;
+        }
+
+
+        .timeline-card p {
+
+            color:
+                var(--muted);
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           PHOTO MEMORIES
+        ===================================================== */
+
+        .memory-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    minmax(0,1fr)
+                );
+
+            gap: 20px;
+        }
+
+
+        .memory-card {
+
+            min-height: 330px;
+
+            border-radius: 24px;
+
+            overflow: hidden;
+
+            position: relative;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #2a182d,
+                    #120b17
+                );
+
+            border:
+                1px solid
+                var(--border);
+        }
+
+
+        .memory-photo {
+
+            width: 100%;
+
+            height: 100%;
+
+            min-height: 330px;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition:
+                transform .5s ease;
+        }
+
+
+        .memory-card:hover
+        .memory-photo {
+
+            transform:
+                scale(1.05);
+        }
+
+
+        .photo-placeholder {
+
+            min-height: 330px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 30px;
+
+            color:
+                #cdbed0;
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-size: 24px;
+        }
+
+
+        .memory-overlay {
+
+            position: absolute;
+
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            padding:
+                50px
+                22px
+                22px;
+
+            background:
+                linear-gradient(
+                    transparent,
+                    rgba(0,0,0,.9)
+                );
+        }
+
+
+        .memory-overlay h3 {
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-size: 23px;
+
+            font-weight: 400;
+
+            margin-bottom: 6px;
+        }
+
+
+        .memory-overlay p {
+
+            color:
+                #ddd0df;
+
+            font-size: 13px;
+
+            line-height: 1.5;
+        }
+
+
+        /* =====================================================
+           INSIDE JOKES
+        ===================================================== */
+
+        .jokes-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    2,
+                    minmax(0,1fr)
+                );
+
+            gap: 20px;
+        }
+
+
+        .joke {
+
+            padding:
+                30px;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 24px;
+
+            background:
+                rgba(255,255,255,.045);
+
+            position: relative;
+        }
+
+
+        .joke-icon {
+
+            font-size: 30px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .joke h3 {
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-size: 24px;
+
+            font-weight: 400;
+
+            margin-bottom: 10px;
+        }
+
+
+        .joke p {
+
+            color:
+                var(--muted);
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           PLACES
+        ===================================================== */
+
+        .places-wrapper {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 30px;
+
+            align-items: stretch;
+        }
+
+
+        .fake-map {
+
+            min-height: 430px;
+
+            border-radius: 28px;
+
+            border:
+                1px solid
+                var(--border);
+
+            background:
+
+                radial-gradient(
+                    circle at 30% 30%,
+                    rgba(255,111,159,.12),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 70% 65%,
+                    rgba(156,108,255,.12),
+                    transparent 35%
+                ),
+
+                #110b17;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .fake-map::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background-image:
+
+                linear-gradient(
+                    rgba(255,255,255,.035) 1px,
+                    transparent 1px
+                ),
+
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,.035) 1px,
+                    transparent 1px
+                );
+
+            background-size:
+                45px 45px;
+
+            transform:
+                rotate(-8deg)
+                scale(1.2);
+        }
+
+
+        .map-line {
+
+            position: absolute;
+
+            height: 2px;
+
+            background:
+                rgba(255,255,255,.1);
+
+            transform-origin: left center;
+        }
+
+
+        .map-line.one {
+
+            width: 430px;
+
+            top: 42%;
+
+            left: -30px;
+
+            transform:
+                rotate(18deg);
+        }
+
+
+        .map-line.two {
+
+            width: 380px;
+
+            top: 60%;
+
+            left: 30px;
+
+            transform:
+                rotate(-25deg);
+        }
+
+
+        .map-line.three {
+
+            width: 300px;
+
+            top: 25%;
+
+            left: 150px;
+
+            transform:
+                rotate(70deg);
+        }
+
+
+        .place-marker {
+
+            position: absolute;
+
+            width: 22px;
+            height: 22px;
+
+            border-radius: 50%;
+
+            background:
+                var(--pink);
+
+            border:
+                4px solid
+                rgba(255,255,255,.9);
+
+            box-shadow:
+                0 0 25px
+                rgba(255,111,159,.7);
+
+            cursor: pointer;
+
+            z-index: 5;
+        }
+
+
+        .marker-one {
+
+            top: 32%;
+            left: 28%;
+        }
+
+
+        .marker-two {
+
+            top: 55%;
+            left: 68%;
+        }
+
+
+        .marker-three {
+
+            top: 72%;
+            left: 42%;
+        }
+
+
+        .place-info {
+
+            padding:
+                30px;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 28px;
+
+            background:
+                var(--card);
+        }
+
+
+        .place-info h3 {
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-size: 30px;
+
+            font-weight: 400;
+
+            margin-bottom: 15px;
+        }
+
+
+        .place-info p {
+
+            color:
+                var(--muted);
+
+            line-height: 1.8;
+
+            font-size: 15px;
+        }
+
+
+        .place-list {
+
+            list-style: none;
+
+            margin-top: 25px;
+        }
+
+
+        .place-list li {
+
+            padding:
+                15px
+                0;
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,.08);
+
+            color:
+                #e7dce9;
+
+            cursor: pointer;
+
+            transition:
+                .2s ease;
+        }
+
+
+        .place-list li:hover {
+
+            color:
+                var(--pink);
+
+            padding-left: 6px;
+        }
+
+
+        /* =====================================================
+           THINGS I LOVE
+        ===================================================== */
+
+        .love-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    4,
+                    minmax(0,1fr)
+                );
+
+            gap: 15px;
+        }
+
+
+        .love-item {
+
+            padding:
+                30px
+                20px;
+
+            min-height: 150px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 22px;
+
+            background:
+                rgba(255,255,255,.04);
+
+            transition:
+                .3s ease;
+        }
+
+
+        .love-item:hover {
+
+            transform:
+                translateY(-5px);
+
+            background:
+                rgba(255,111,159,.08);
+        }
+
+
+        .love-item span {
+
+            font-size: 30px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .love-item p {
+
+            color:
+                #eee4ef;
+
+            font-size: 14px;
+
+            line-height: 1.5;
+        }
+
+
+        /* =====================================================
+           FINAL REVEAL
+        ===================================================== */
+
+        .reveal-section {
+
+            text-align: center;
+
+            padding-top: 130px;
+
+            padding-bottom: 160px;
+        }
+
+
+        .lock {
+
+            font-size: 50px;
+
+            margin-bottom: 20px;
+
+            transition:
+                .5s ease;
+        }
+
+
+        .reveal-progress {
+
+            max-width: 500px;
+
+            height: 7px;
+
+            margin:
+                30px
+                auto;
+
+            background:
+                rgba(255,255,255,.08);
+
+            border-radius: 999px;
+
+            overflow: hidden;
+        }
+
+
+        .reveal-progress-fill {
+
+            width: 0%;
+
+            height: 100%;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--pink),
+                    var(--purple)
+                );
+
+            transition:
+                width .6s ease;
+        }
+
+
+        .reveal-text {
+
+            max-width: 700px;
+
+            margin:
+                0 auto;
+
+            color:
+                var(--muted);
+
+            line-height: 1.8;
+        }
+
+
+        .final-letter {
+
+            display: none;
+
+            max-width: 750px;
+
+            margin:
+                50px
+                auto
+                0;
+
+            padding:
+                55px
+                35px;
+
+            border:
+                1px solid
+                rgba(255,111,159,.3);
+
+            border-radius: 30px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,111,159,.09),
+                    rgba(156,108,255,.06)
+                );
+
+            text-align: left;
+
+            animation:
+                letterAppear .8s ease;
+        }
+
+
+        .final-letter.show {
+
+            display: block;
+        }
+
+
+        @keyframes letterAppear {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(30px);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+        }
+
+
+        .final-letter .letter-date {
+
+            color:
+                var(--pink);
+
+            font-size: 13px;
+
+            margin-bottom: 30px;
+        }
+
+
+        .final-letter h2 {
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-weight: 400;
+
+            font-size:
+                clamp(
+                    30px,
+                    6vw,
+                    45px
+                );
+
+            margin-bottom: 25px;
+        }
+
+
+        .final-letter p {
+
+            color:
+                #ddd0df;
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-size: 18px;
+
+            line-height: 2;
+
+            margin-bottom: 20px;
+        }
+
+
+        .signature {
+
+            margin-top: 35px;
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-size: 24px;
+
+            color:
+                var(--light-pink);
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+
+            text-align: center;
+
+            padding:
+                35px
+                20px
+                50px;
+
+            color:
+                #786b7c;
+
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 800px) {
+
+            section {
+
+                padding:
+                    75px
+                    18px;
+            }
+
+
+            .timeline::before {
+
+                left: 15px;
+            }
+
+
+            .timeline-item,
+            .timeline-item:nth-child(even),
+            .timeline-item:nth-child(odd) {
+
+                width: 100%;
+
+                left: 0;
+
+                padding:
+                    15px
+                    0
+                    15px
+                    45px;
+
+                text-align: left;
+            }
+
+
+            .timeline-item:nth-child(odd)
+            .timeline-dot,
+            .timeline-item:nth-child(even)
+            .timeline-dot {
+
+                left: 8px;
+
+                right: auto;
+            }
+
+
+            .memory-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .jokes-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .places-wrapper {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .love-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .hero {
+
+                min-height: 90vh;
+
+                padding:
+                    50px
+                    18px;
+            }
+
+
+            .hero h1 {
+
+                font-size: 52px;
+            }
+
+
+            .hero-description {
+
+                font-size: 15px;
+            }
+
+
+            .met-card {
+
+                padding:
+                    40px
+                    20px;
+            }
+
+
+            .timeline-card {
+
+                padding:
+                    22px;
+            }
+
+
+            .memory-card {
+
+                min-height: 280px;
+            }
+
+
+            .memory-photo,
+            .photo-placeholder {
+
+                min-height: 280px;
+            }
+
+
+            .love-grid {
+
+                grid-template-columns:
+                    1fr 1fr;
+
+                gap: 10px;
+            }
+
+
+            .love-item {
+
+                min-height: 135px;
+
+                padding:
+                    20px
+                    10px;
+            }
+
+
+            .final-letter {
+
+                padding:
+                    38px
+                    22px;
+            }
+
+
+            .final-letter p {
+
+                font-size: 17px;
+
+                line-height: 1.8;
+            }
+
+        }
+
+
+        /* =====================================================
+           REDUCED MOTION
+        ===================================================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+
+                animation-duration:
+                    0.01ms !important;
+
+                animation-iteration-count:
+                    1 !important;
+
+                transition-duration:
+                    0.01ms !important;
+
+                scroll-behavior:
+                    auto !important;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HERO
+    ===================================================== -->
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="hero-small">
+                A little story about us
+            </div>
+
+
+            <div class="hero-heart">
+                ❤️
+            </div>
+
+
+            <!-- CHANGE THIS NAME -->
+
+            <h1>
+                Our Story
+            </h1>
+
+
+            <div class="hero-name">
+                For My Favorite Person
+            </div>
+
+
+            <p class="hero-description">
+
+                Some stories are written in books.
+
+                Ours is written in little moments,
+                random conversations, unexpected memories,
+                laughter, and all the things that somehow
+                became important without us realizing it.
+
+            </p>
+
+
+            <a
+                href="#beginning"
+                class="scroll-button"
+            >
+                Start our story
+                <span>↓</span>
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         THE DAY WE MET
+    ===================================================== -->
+
+    <section
+        id="beginning"
+        class="met-section"
+    >
+
+        <div class="section-label">
+            Chapter One
+        </div>
+
+
+        <h2 class="section-title">
+            The day we met
+        </h2>
+
+
+        <p class="section-description">
+            Every story has a beginning.
+            This one happens to be one of my favorites.
+        </p>
+
+
+        <div class="met-card">
+
+            <!-- CHANGE DATE -->
+
+            <div class="date">
+                THE DAY EVERYTHING STARTED
+            </div>
+
+
+            <!-- CHANGE THIS -->
+
+            <h3>
+                The moment I met you.
+            </h3>
+
+
+            <!-- CHANGE THIS -->
+
+            <p>
+
+                I don't think either of us knew
+                that this moment would eventually become
+                part of such a meaningful story.
+
+                <br>
+                <br>
+
+                Maybe that's what makes memories special.
+
+                We don't always know we're making one
+                until we look back.
+
+            </p>
+
+
+            <div class="met-heart">
+                ♡
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         TIMELINE
+    ===================================================== -->
+
+    <section>
+
+        <div class="section-label">
+            Chapter Two
+        </div>
+
+
+        <h2 class="section-title">
+            Little moments that became memories
+        </h2>
+
+
+        <p class="section-description">
+
+            These are the moments I would choose
+            to keep if I could put pieces of our story
+            into a little box.
+
+        </p>
+
+
+        <div class="timeline">
+
+
+            <!-- TIMELINE ITEM 1 -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <div class="timeline-date">
+                        Chapter 01
+                    </div>
+
+                    <h3>
+                        When it all began
+                    </h3>
+
+                    <p>
+                        Replace this with the story
+                        of your first meaningful moment.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- TIMELINE ITEM 2 -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <div class="timeline-date">
+                        Chapter 02
+                    </div>
+
+                    <h3>
+                        The first memory
+                    </h3>
+
+                    <p>
+                        That moment that seemed small
+                        at the time but somehow stayed
+                        with me.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- TIMELINE ITEM 3 -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <div class="timeline-date">
+                        Chapter 03
+                    </div>
+
+                    <h3>
+                        The moment I realized
+                    </h3>
+
+                    <p>
+                        Add the moment when you realized
+                        this person had become important
+                        to you.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- TIMELINE ITEM 4 -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <div class="timeline-date">
+                        Chapter 04
+                    </div>
+
+                    <h3>
+                        One of my favorite days
+                    </h3>
+
+                    <p>
+                        Describe one of the days you
+                        would happily relive.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- TIMELINE ITEM 5 -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-card">
+
+                    <div class="timeline-date">
+                        Chapter 05
+                    </div>
+
+                    <h3>
+                        A memory I keep
+                    </h3>
+
+                    <p>
+                        Add another special moment,
+                        conversation, trip, joke or memory.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PHOTO MEMORIES
+    ===================================================== -->
+
+    <section>
+
+        <div class="section-label">
+            Chapter Three
+        </div>
+
+
+        <h2 class="section-title">
+            Little pieces of us
+        </h2>
+
+
+        <p class="section-description">
+
+            A photograph freezes a moment.
+
+            But sometimes, looking at it brings back
+            everything surrounding that moment too.
+
+        </p>
+
+
+        <div class="memory-grid">
+
+
+            <!-- PHOTO 1 -->
+
+            <div class="memory-card">
+
+                <!--
+                    REPLACE THE PLACEHOLDER WITH:
+
+                    <img
+                        class="memory-photo"
+                        src="images/photo1.jpg"
+                        alt="Our memory"
+                    >
+                -->
+
+                <div class="photo-placeholder">
+                    <img
+                        class="memory-photo"
+                        src="../images/img1.jpeg"
+                        alt="Our memory"
+                    >
+                    
+                    <br>
+                    Our first favorite memory
+                </div>
+
+
+                <div class="memory-overlay">
+
+                    <h3>
+                        This moment.
+                    </h3>
+
+                    <p>
+                        Add the story behind this photo.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 2 -->
+
+            <div class="memory-card">
+
+                <div class="photo-placeholder">
+                    <img
+                        class="memory-photo"
+                        src="../images/img2.jpeg"
+                        alt="Our memory"
+                    >
+                    <br>
+                    One of my favorite days
+                </div>
+
+
+                <div class="memory-overlay">
+
+                    <h3>
+                        A day worth remembering.
+                    </h3>
+
+                    <p>
+                        Add a memory here.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PHOTO 3 -->
+
+            <div class="memory-card">
+
+                <div class="photo-placeholder">
+                    <img
+                        class="memory-photo"
+                        src="../images/img3.jpeg"
+                        alt="Our memory"
+                    >
+                    
+                    <br>
+                    Just us.
+                </div>
+
+
+                <div class="memory-overlay">
+
+                    <h3>
+                        One more memory.
+                    </h3>
+
+                    <p>
+                        Add your story here.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         INSIDE JOKES
+    ===================================================== -->
+
+    <section>
+
+        <div class="section-label">
+            Chapter Four
+        </div>
+
+
+        <h2 class="section-title">
+            Things only we understand
+        </h2>
+
+
+        <p class="section-description">
+
+            The best relationships have their own
+            language.
+
+            The jokes that make no sense to anyone else.
+
+            The words that somehow became funny.
+
+            The random moments that still make us laugh.
+
+        </p>
+
+
+        <div class="jokes-grid">
+
+
+            <div class="joke">
+
+                <div class="joke-icon">
+                    😂
+                </div>
+
+                <h3>
+                    That one joke
+                </h3>
+
+                <p>
+                    You know exactly which one.
+                    Add your inside joke here.
+                </p>
+
+            </div>
+
+
+            <div class="joke">
+
+                <div class="joke-icon">
+                    🤭
+                </div>
+
+                <h3>
+                    The thing we always say
+                </h3>
+
+                <p>
+                    Add a phrase or expression
+                    that became "ours."
+                </p>
+
+            </div>
+
+
+            <div class="joke">
+
+                <div class="joke-icon">
+                    🥹
+                </div>
+
+                <h3>
+                    That random moment
+                </h3>
+
+                <p>
+                    Something completely ordinary
+                    that somehow became unforgettable.
+                </p>
+
+            </div>
+
+
+            <div class="joke">
+
+                <div class="joke-icon">
+                    ❤️
+                </div>
+
+                <h3>
+                    Our little thing
+                </h3>
+
+                <p>
+                    Add something here that only
+                    the two of you would understand.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MEANINGFUL PLACES
+    ===================================================== -->
+
+    <section>
+
+        <div class="section-label">
+            Chapter Five
+        </div>
+
+
+        <h2 class="section-title">
+            Places that mean something
+        </h2>
+
+
+        <p class="section-description">
+
+            Some places become special simply because
+            someone special was there with you.
+
+        </p>
+
+
+        <div class="places-wrapper">
+
+
+            <!-- SCHEMATIC MAP -->
+
+            <div class="fake-map">
+
+                <div class="map-line one"></div>
+
+                <div class="map-line two"></div>
+
+                <div class="map-line three"></div>
+
+
+                <button
+                    type="button"
+                    class="place-marker marker-one"
+                    data-place="place1"
+                    aria-label="First meaningful place"
+                ></button>
+
+
+                <button
+                    type="button"
+                    class="place-marker marker-two"
+                    data-place="place2"
+                    aria-label="Second meaningful place"
+                ></button>
+
+
+                <button
+                    type="button"
+                    class="place-marker marker-three"
+                    data-place="place3"
+                    aria-label="Third meaningful place"
+                ></button>
+
+            </div>
+
+
+            <!-- PLACE DETAILS -->
+
+            <div class="place-info">
+
+                <h3 id="placeTitle">
+                    Our places
+                </h3>
+
+
+                <p id="placeDescription">
+
+                    Tap one of the little hearts
+                    on the map to reveal a memory.
+
+                </p>
+
+
+                <ul class="place-list">
+
+                    <li
+                        data-place="place1"
+                    >
+                        ❤️ Place One
+                    </li>
+
+                    <li
+                        data-place="place2"
+                    >
+                        ❤️ Place Two
+                    </li>
+
+                    <li
+                        data-place="place3"
+                    >
+                        ❤️ Place Three
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         THINGS I LOVE ABOUT YOU
+    ===================================================== -->
+
+    <section>
+
+        <div class="section-label">
+            Chapter Six
+        </div>
+
+
+        <h2 class="section-title">
+            Things I love about you
+        </h2>
+
+
+        <p class="section-description">
+
+            Not everything important can be captured
+            in a photograph.
+
+            Some of my favorite things about you
+            are the little things.
+
+        </p>
+
+
+        <div class="love-grid">
+
+
+            <div class="love-item">
+
+                <span>😊</span>
+
+                <p>
+                    Your smile
+                </p>
+
+            </div>
+
+
+            <div class="love-item">
+
+                <span>😂</span>
+
+                <p>
+                    Your laugh
+                </p>
+
+            </div>
+
+
+            <div class="love-item">
+
+                <span>💭</span>
+
+                <p>
+                    The way you think
+                </p>
+
+            </div>
+
+
+            <div class="love-item">
+
+                <span>❤️</span>
+
+                <p>
+                    Your heart
+                </p>
+
+            </div>
+
+
+            <div class="love-item">
+
+                <span>✨</span>
+
+                <p>
+                    Your energy
+                </p>
+
+            </div>
+
+
+            <div class="love-item">
+
+                <span>🥹</span>
+
+                <p>
+                    The little things
+                </p>
+
+            </div>
+
+
+            <div class="love-item">
+
+                <span>🌙</span>
+
+                <p>
+                    The way you make ordinary
+                    moments special
+                </p>
+
+            </div>
+
+
+            <div class="love-item">
+
+                <span>🫶</span>
+
+                <p>
+                    Simply being you
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FINAL REVEAL
+    ===================================================== -->
+
+    <section
+        class="reveal-section"
+        id="ending"
+    >
+
+        <div class="section-label">
+            The Final Chapter
+        </div>
+
+
+        <div
+            class="lock"
+            id="lockIcon"
+        >
+            🔒
+        </div>
+
+
+        <h2 class="section-title">
+            One last thing...
+        </h2>
+
+
+        <p class="reveal-text">
+
+            You've made it all the way through our little
+            scrapbook.
+
+            There's one more page waiting for you.
+
+        </p>
+
+
+        <div class="reveal-progress">
+
+            <div
+                class="reveal-progress-fill"
+                id="revealProgress"
+            ></div>
+
+        </div>
+
+
+        <p
+            id="revealStatus"
+            class="reveal-text"
+        >
+            Keep exploring the story...
+        </p>
+
+
+        <!-- FINAL LETTER -->
+
+        <div
+            class="final-letter"
+            id="finalLetter"
+        >
+
+            <div class="letter-date">
+                A letter from me to you
+            </div>
+
+
+            <h2>
+                If I could keep one thing...
+            </h2>
+
+
+            <p>
+
+                If I could keep one thing from
+                everything we've shared, it wouldn't
+                be one particular day.
+
+            </p>
+
+
+            <p>
+
+                It would be the feeling that comes
+                from knowing that somehow, out of all
+                the people in this enormous world,
+                our paths crossed.
+
+            </p>
+
+
+            <p>
+
+                I would keep the laughs.
+
+                The random conversations.
+
+                The little moments.
+
+                The memories that didn't seem important
+                when they happened but became important
+                later.
+
+            </p>
+
+
+            <p>
+
+                And if this story has taught me anything,
+                it's that the best parts aren't always
+                the big moments.
+
+                Sometimes they're the tiny ones.
+
+                The ones we almost forget.
+
+                The ones that quietly become our favorites.
+
+            </p>
+
+
+            <p>
+
+                So thank you.
+
+                For being part of my story.
+
+                For all the memories we've already made.
+
+                And for all the ones we haven't made yet.
+
+            </p>
+
+
+            <p>
+
+                This isn't the end of our story.
+
+                It's just the end of this chapter.
+
+            </p>
+
+
+            <div class="signature">
+
+                With all my heart,
+
+                ❤️
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <footer>
+
+        Made with love ❤️
+
+        <br>
+
+        For one very special person.
+
+    </footer>
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* =====================================================
+       FINAL CHAPTER
+    ===================================================== */
+
+    let finalUnlocked = false;
+
+    const finalChapter =
+        document.getElementById("ending");
+
+    const finalLetter =
+        document.getElementById("finalLetter");
+
+    const lockIcon =
+        document.getElementById("lockIcon");
+
+    const revealProgress =
+        document.getElementById("revealProgress");
+
+    const revealStatus =
+        document.getElementById("revealStatus");
+
+
+    /* =====================================================
+       UNLOCK FINAL CHAPTER
+    ===================================================== */
+
+    function unlockFinalChapter() {
+
+        if (finalUnlocked) {
+            return;
+        }
+
+        finalUnlocked = true;
+
+
+        /* ---------------------------------------------
+           Unlock the letter
+        --------------------------------------------- */
+
+        if (finalLetter) {
+
+            /*
+             * Your CSS specifically uses:
+             *
+             * .final-letter.show {
+             *     display: block;
+             * }
+             */
+
+            finalLetter.classList.add("show");
+
+        }
+
+
+        /* ---------------------------------------------
+           Change lock icon
+        --------------------------------------------- */
+
+        if (lockIcon) {
+
+            lockIcon.textContent = "🔓";
+
+            lockIcon.style.transform =
+                "scale(1.15)";
+
+            setTimeout(function () {
+
+                lockIcon.style.transform =
+                    "scale(1)";
+
+            }, 500);
+
+        }
+
+
+        /* ---------------------------------------------
+           Fill progress bar
+        --------------------------------------------- */
+
+        if (revealProgress) {
+
+            revealProgress.style.width = "100%";
+
+        }
+
+
+        /* ---------------------------------------------
+           Change status text
+        --------------------------------------------- */
+
+        if (revealStatus) {
+
+            revealStatus.textContent =
+                "You found the final page. ❤️";
+
+            revealStatus.style.color =
+                "#ffb4ca";
+
+        }
+
+    }
+
+
+    /* =====================================================
+       WATCH FINAL CHAPTER
+    ===================================================== */
+
+    if (finalChapter) {
+
+        const finalObserver =
+            new IntersectionObserver(
+                function (entries) {
+
+                    entries.forEach(function (entry) {
+
+                        /*
+                         * Once the visitor reaches the
+                         * final chapter, unlock it.
+                         *
+                         * IMPORTANT:
+                         * We do NOT scroll anywhere.
+                         */
+
+                        if (entry.isIntersecting) {
+
+                            unlockFinalChapter();
+
+                        }
+
+                    });
+
+                },
+                {
+                    /*
+                     * Only a small portion of the final
+                     * section needs to be visible.
+                     */
+
+                    threshold: 0.15
+                }
+            );
+
+
+        finalObserver.observe(finalChapter);
+
+    }
+
+
+    /* =====================================================
+       PLACE MARKERS
+    ===================================================== */
+
+    const places = {
+
+        place1: {
+
+            title: "Place One",
+
+            description:
+                "This is where one of our favorite memories happened. Replace this with your own story."
+
+        },
+
+        place2: {
+
+            title: "Place Two",
+
+            description:
+                "Another place that became special simply because of the memories connected to it."
+
+        },
+
+        place3: {
+
+            title: "Place Three",
+
+            description:
+                "A place that will always remind me of you and the moments we shared."
+
+        }
+
+    };
+
+
+    /* =====================================================
+       PLACE TITLE / DESCRIPTION
+    ===================================================== */
+
+    const placeTitle =
+        document.getElementById("placeTitle");
+
+    const placeDescription =
+        document.getElementById("placeDescription");
+
+
+    function showPlace(placeID) {
+
+        if (!places[placeID]) {
+            return;
+        }
+
+
+        if (placeTitle) {
+
+            placeTitle.textContent =
+                places[placeID].title;
+
+        }
+
+
+        if (placeDescription) {
+
+            placeDescription.textContent =
+                places[placeID].description;
+
+        }
+
+    }
+
+
+    /* =====================================================
+       MAP MARKERS
+    ===================================================== */
+
+    document.querySelectorAll(
+        ".place-marker"
+    ).forEach(function (marker) {
+
+        marker.addEventListener(
+            "click",
+            function () {
+
+                const placeID =
+                    marker.getAttribute(
+                        "data-place"
+                    );
+
+                showPlace(placeID);
+
+            }
+        );
+
+    });
+
+
+    /* =====================================================
+       PLACE LIST
+    ===================================================== */
+
+    document.querySelectorAll(
+        ".place-list li"
+    ).forEach(function (item) {
+
+        item.addEventListener(
+            "click",
+            function () {
+
+                const placeID =
+                    item.getAttribute(
+                        "data-place"
+                    );
+
+                showPlace(placeID);
+
+            }
+        );
+
+    });
+
+
+    /* =====================================================
+       FLOATING HEARTS
+    ===================================================== */
+
+    const hearts = [
+        "♥",
+        "♡",
+        "❤",
+        "💕"
+    ];
+
+
+    function createHeart() {
+
+        const heart =
+            document.createElement("span");
+
+        heart.className =
+            "floating-heart";
+
+
+        heart.textContent =
+            hearts[
+                Math.floor(
+                    Math.random() * hearts.length
+                )
+            ];
+
+
+        heart.style.left =
+            Math.random() * 100 + "%";
+
+
+        heart.style.setProperty(
+            "--drift",
+            (Math.random() * 120 - 60) + "px"
+        );
+
+
+        heart.style.animationDuration =
+            (7 + Math.random() * 7) + "s";
+
+
+        heart.style.animationDelay =
+            Math.random() * 2 + "s";
+
+
+        document.body.appendChild(heart);
+
+
+        setTimeout(function () {
+
+            heart.remove();
+
+        }, 15000);
+
+    }
+
+
+    setInterval(
+        createHeart,
+        1800
+    );
+
+
+});
+</script>
+
+</body>
+
+</html>
